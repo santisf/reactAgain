@@ -1,3 +1,5 @@
+import CartWidget from "./CartWidget"
+
 function NavBar(){
     return(
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -8,9 +10,7 @@ function NavBar(){
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
+              
               <li className="nav-item">
                 <a className="nav-link" href="#">Bitácora empresarial</a>
               </li>
@@ -26,6 +26,9 @@ function NavBar(){
               </li>
               <li className="nav-item">
                 <a className="nav-link disabled">Acuerdo de confidencialidad</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#"><CartWidget/></a>
               </li>
             </ul>
             <form className="d-flex">
