@@ -25,15 +25,12 @@ import ItemList from "./ItemList";
     )}*/
     const item= [
 
-        {id:"1", title: "pancreas", description:"pancreas en buen estado", precio:5000, img:"",stock:3},
-        {id:"2", title: "higado", description:"higado sano y joven", precio:8000, img:"",stock:4}
+        {id:"1", title: "pancreas", description:"pancreas en buen estado", price:5000, img:"",stock:3},
+        {id:"2", title: "higado", description:"higado sano y joven", price:8000, img:"",stock:4}
       
       ]
 
-     
-      
-function ItemListContainer({saludo="falta escribir el saludo"}){
-    const getFetch = () =>{
+      const getFetch = () =>{
         return new Promise((resolve,reject) => {
     
             setTimeout(() => {
@@ -42,6 +39,9 @@ function ItemListContainer({saludo="falta escribir el saludo"}){
     
         })
     }
+      
+function ItemListContainer({saludo="falta escribir el saludo"}){
+
     const [loading, setLoading] = useState(false)
     const [productos, setProductos] = useState([])
     
@@ -67,19 +67,6 @@ function ItemListContainer({saludo="falta escribir el saludo"}){
 
     return(
     <div className= "container-fluid itemListContainer">
-        <Card className=" col-lg-4" style={{ width: '18rem'}}>
-            <Card.Img variant="top" src="holder.js/100px180" />
-            <Card.Body>
-                <Card.Title>{saludo}</Card.Title>
-                <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
-                </Card.Text>
-                <ItemCount/>
-                <Button  variant="primary">Go somewhere</Button>
-            </Card.Body>
-        </Card>
-       
        {
                 loading
                     ? <h2>Cargando..</h2>

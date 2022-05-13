@@ -32,7 +32,7 @@ const[bool, setBool]=useState(true)*/
             .finally(()=>{console.log("finalizado")})*/
 
 function App() {
-  
+
   const [{item}, setItem]= useState([]);
 
     
@@ -46,6 +46,8 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
+      <br/>
+      <br/>
       <ItemListContainer saludo={"Bienvenidos"}/>
       
       <header className="App-header">
